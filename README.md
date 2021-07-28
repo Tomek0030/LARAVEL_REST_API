@@ -10,50 +10,47 @@ API REST  napisane w Laravel.</br>
 Baza: SQLite.</br>
 Program napisany w Visual Studio Code. Do testowania API użyłem programu POSTMAN.</br>
 Dodałem do projektu rozszerzenie SQLite w VSC.</br>
-Adres serwera np: 127.0.0.1:8000.</br>
+{adres_serwera} - np: 127.0.0.1:8000</br>
+{id_appointment} - id istniejącego terminu spotkania</br>
+{adres_email} - adres email osoby rezerwującej</br></br>
 
-1. Administracja terminami
+<b>1. Administracja terminami</b>
 
--Wyświetlanie wszystkich terminów
+<b>-Wyświetlanie wszystkich terminów:</br></b>
 GET http://{adres_serwera}/api/appointments
 
--Dodawanie nowego terminu
-Headers: KEY:Accept VALUE:application/json
-Body: raw JSON 
-{
-    "booking_date": "2022-07-27 08:00",
-    "description": "DESC"
-}
+<b>-Dodawanie nowego terminu:</br></b>
+Headers:</br> -KEY:Accept</br> -VALUE:application/json</br>
+Body: raw JSON </br>
+{</br>
+    "booking_date": "2022-07-27 08:00",</br>
+    "description": "DESC"</br>
+}</br>
 POST http://{adres_serwera}/api/appointments
 
--Edycja terminu
-Headers: KEY:Accept VALUE:application/json
-Body: raw JSON 
-{
-    "booking_date": "2022-07-27 08:00",
-    "description": "DESC"
-}
-PUT http://{adres_serwera}/api/appointments/{id_appointment}
-{id_appointment} - id utworzonego terminu spotkania
+<b>-Edycja terminu:</br></b>
+Headers:</br> -KEY:Accept</br> -VALUE:application/json</br>
+Body: raw JSON </br>
+{</br>
+    "booking_date": "2022-07-27 08:00",</br>
+    "description": "DESC"</br>
+}</br>
+PUT http://{adres_serwera}/api/appointments/{id_appointment}</br>
 
--Usunięcie terminu
-DELETE http://{adres_serwera}/api/appointments/{id_appointment}
-{id_appointment} - id istniejącego terminu spotkania
+<b>-Usunięcie terminu:</br></b>
+DELETE http://{adres_serwera}/api/appointments/{id_appointment}</br>
 
--Wyświetlenie zarezerwowanych terminów
+<b>-Wyświetlenie zarezerwowanych terminów:</br></b>
 GET http://{adres_serwera}/api/status/unavailable
 
-2. Rezerwacja terminu
+<b>2. Rezerwacja terminu</b>
 
--Wyświetlenie wszystkich dostępnych terminów
+<b>-Wyświetlenie wszystkich dostępnych terminów:</br></b>
 GET http://{adres_serwera}/api/status/available
 
--Rezerwacja wybranego terminu
+<b>-Rezerwacja wybranego terminu</br></b>
 GET http://{adres_serwera}/api/add/appointment/{id_appointment}/email/{adres_email}
-{id_appointment} - id istniejącego terminu spotkania
-{adres_email} - adres email osoby rezerwującej
 
--Odwołanie rezerwacji
-GET http://{adres_serwera}/api/remove/appointment/{id_appointment}/email/{adres_email}
-{id_appointment} - id istniejącego terminu spotkania
-{adres_email} - adres email osoby rezerwującej konkretne id spotkania
+<b>-Odwołanie rezerwacji:</br></b>
+GET http://{adres_serwera}/api/remove/appointment/{id_appointment}/email/{adres_email}</br>
+
