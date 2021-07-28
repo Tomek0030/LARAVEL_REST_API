@@ -6,11 +6,11 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
-API REST  napisane w Laravel
-Baza: SQLite
-Program napisany w Visual Studio Code. Do testowania API użyłem programu POSTMAN
-Dodałem do projektu rozszerzenie SQLite w VSC
-Adres serwera np: 127.0.0.1:8000
+API REST  napisane w Laravel.</br>
+Baza: SQLite.</br>
+Program napisany w Visual Studio Code. Do testowania API użyłem programu POSTMAN.</br>
+Dodałem do projektu rozszerzenie SQLite w VSC.</br>
+Adres serwera np: 127.0.0.1:8000.</br>
 
 1. Administracja terminami
 
